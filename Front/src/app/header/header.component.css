@@ -1,0 +1,11 @@
+.navbar {
+    background-color: #339FFF;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 150%;
+}
+
+.navbar-brand{
+    
+    font-size: 80px;
+    font-weight: bolder;
+}   
