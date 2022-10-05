@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
 import { HeaderComponent } from './header/header.component';
 import { MongodbComponent } from './mongodb/mongodb.component';
+import { ExpressjsComponent } from './expressjs/expressjs.component';
+import { AngularComponent } from './angular/angular.component';
+import { NodejsComponent } from './nodejs/nodejs.component';
 
 const routes: Route[] = [
   {
@@ -14,8 +17,20 @@ const routes: Route[] = [
     component: IndexComponent
   },
   {
-    path: '/mongodb',
+    path: 'mongodb',
     component: MongodbComponent
+  },
+  {
+    path: 'expressjs',
+    component: ExpressjsComponent
+  },
+  {
+    path: 'angular',
+    component: AngularComponent
+  },
+  {
+    path: 'nodejs',
+    component: NodejsComponent
   },
 ]
 
@@ -24,7 +39,10 @@ const routes: Route[] = [
     AppComponent,
     IndexComponent,
     HeaderComponent,
-    MongodbComponent
+    MongodbComponent,
+    ExpressjsComponent,
+    AngularComponent,
+    NodejsComponent
   ],
   imports: [
     BrowserModule,
