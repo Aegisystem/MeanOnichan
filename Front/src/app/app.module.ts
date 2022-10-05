@@ -14,7 +14,7 @@ const routes: Route[] = [
     component: IndexComponent
   },
   {
-    path: '/mongodb',
+    path: 'mongodb',
     component: MongodbComponent
   },
 ]
