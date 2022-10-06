@@ -1,0 +1,23 @@
+.container {
+    margin-top: 60px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 20px;
+}
+
+h1 {
+
+    margin-bottom: 50px;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-weight: bolder;
+}
+
+.card {
+    margin-left: 117px;
+    background-color: rgb(172, 87, 87);
+}
+
+img {
+    margin-top: 10px;
+}
