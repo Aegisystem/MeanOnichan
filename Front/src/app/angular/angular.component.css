@@ -1,0 +1,15 @@
+h1 {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 75px;
+    display: flex;
+    
+
+}
+
+div {
+
+    width: auto;
+    height: 200px;
+    display: flex;
+
+}
