@@ -1,13 +1,77 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@800&family=Gemunu+Libre:wght@800&family=Lato:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
-
+<link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:wght@800&family=Gemunu+Libre:wght@800&family=Lato:ital,wght@0,300;1,400&display=swap"
+    rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alkalami&display=swap" rel="stylesheet">
 
 <body>
     <div class="container">
-        <h1>¿Qué es MongoDB?</h1>
-        <p>
-            
+        <h1>{{ titulo }}</h1>
+        <figure class="text-center">
+            <blockquote class="blockquote">
+                <p>
+                    {{ fraseInicial }}
+                </p>
+            </blockquote>
+        </figure>
+
+        <img src="../assets/images/mongodb.png" alt="logo mongodb">
+        <p id="concepto">
+            Es un sistema de base de datos no relacional o NoSQL creado en C++ orientado a documentos. Es un software de
+            licencia libre y funcional en diferentes sistemas operativos.
+            <br>
+            El formato en el que almacena la información MongoDB es BSON o Binary JSON. Además, a consola de busqueda
+            (MongoDB Shell) es hecha sobre Javascript, lo que quiere decir que se hacen las consultas sobre este
+            lenguaje.
         </p>
-    </div>    
+        <figure class="text-center">
+            <blockquote class="blockquote">
+                <p>
+                    Una de las diferencias más importantes con respecto a las bases de datos relacionales, es que no es
+                    necesario seguir un esquema.
+                </p>
+            </blockquote>
+        </figure>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title text-center">Historia de MongoDB</h2>
+                        <div id="content">
+                            <ul class="timeline">
+                                <li class="event" data-date="2003">
+                                    <h3>Escalabilidad</h3>
+                                    <p>problemas de escalabilidad con los sistemas de bases de datos tradicionales.</p>
+                                </li>
+                                <li class="event" data-date="2007">
+                                    <h3>10gen</h3>
+                                    <p>
+                                        Dwight Merriman, Eliot Horowitz y Kevin Ryan fundan 10gen para construir una PaaS.
+                                    </p>
+                                </li>
+                                <li class="event" data-date="2009">
+                                    <h3>Lanzamiento</h3>
+                                    <ul>
+                                        <li>Febrero: MongoDB 1.0 con funciones básicas.</li>
+                                        <li>Diciembre: MongoDB 1.2 con procesamiento de datos a gran escala.</li>
+                                        <li>Servicios de soporte y capacitación.</li>
+                                        <li>Reconocimiento de la marca.</li>
+                                    </ul>
+                                </li>
+                                <li class="event" data-date="8:30 - 9:30pm">
+                                    <h3>Closing Ceremony</h3>
+                                    <p>See how is the victor and who are the losers. The big stage is where the winners bask in their own glory.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
