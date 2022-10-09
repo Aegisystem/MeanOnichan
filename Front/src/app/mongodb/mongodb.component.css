@@ -1,4 +1,11 @@
+body {
+    
+}
+
 h1 {
+    font-family: 'Exo 2', sans-serif;
+    margin-top: 10px;
+    font-size: 75px;
     text-align: center;
 }
 
