@@ -1,5 +1,3 @@
-body {}
-
 h1{
     font-family: 'Exo 2', sans-serif;
     margin-top: 10px;
@@ -14,13 +12,19 @@ blockquote {
     font-style: italic;
 }
 
-img {
+#hoja {
     margin-right: 4px;
     float: left;
+    width: 20%;
+    height: 20%;
 }
 
 #concepto {
     text-align: justify;
+}
+
+#ventydesv {
+    margin-top: 30px;
 }
 
 
@@ -153,4 +157,11 @@ h2 {
 .rtl .timeline .event::after {
     left: 0;
     right: -55.8px;
+}
+
+
+
+#carrusel, #carouselExampleDark {
+    height: 500px;
+    
 }
