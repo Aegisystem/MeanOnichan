@@ -15,7 +15,7 @@ h1{
 }
 #concepto{
     margin-right: 100px;
-    margin-top: 150px;
+    margin-top: 95px;
     text-align: justify;
     font-size: large;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -34,7 +34,8 @@ h1{
 .titulo1{
     margin-bottom: 16px;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 7%;
+    margin-right: 100px;
     
 }
 /* LINEA DEL TIEMPO*/
