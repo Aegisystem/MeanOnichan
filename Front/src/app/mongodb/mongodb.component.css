@@ -7,11 +7,14 @@ blockquote {
 }
 
 #hoja {
-    margin-right: 4px;
+    margin-right: 20px;
     float: left;
     width: 20%;
     height: 20%;
+    padding-right: 50px;
+    
 }
+
 
 #concepto {
     text-align: justify;
