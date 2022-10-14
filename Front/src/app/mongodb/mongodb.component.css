@@ -1,4 +1,10 @@
-
+h1{
+    font-family: 'Exo 2', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 35px;
+    font-size: 75px;
+    text-align: center;
+}
 
 blockquote {
     font-family: cursive;
@@ -17,6 +23,7 @@ blockquote {
 
 
 #concepto {
+    margin-top: 80px;
     text-align: justify;
 }
 
@@ -24,128 +31,120 @@ blockquote {
     margin-top: 30px;
 }
 
-/*Empieza línea de tiempo*/
 h2 {
     font-family: 'Exo 2', sans-serif;
     font-size: 40px;
 }
 
-.card {
-    background-color: rgb(202, 109, 109);;
-}
-
-.timeline {
-    border-left: 3px solid #339FFF;
-    border-bottom-right-radius: 4px;
-    border-top-right-radius: 4px;
-    background: rgb(201, 89, 89);
-    margin: 0 auto;
-    letter-spacing: 0.2px;
+/*LÍNEA DEL TIEMPO*/
+body {
+    font-family: "Source Sans Pro", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  
+  #timeline {
+    margin-top: 100px;
+    display: flex;
+    background-color: #251c03;
+  }
+  #timeline:hover .tl-item {
+    width: 23.3333%;
+  }
+  
+  .tl-item {
+    transform: translate3d(0, 0, 0);
     position: relative;
-    line-height: 1.4em;
-    font-size: 1.03em;
-    padding: 50px;
-    list-style: none;
-    text-align: left;
-    max-width: 40%;
-}
-
-@media (max-width: 767px) {
-    .timeline {
-        max-width: 98%;
-        padding: 25px;
-    }
-}
-
-.timeline h1 {
-    font-weight: 300;
-    font-size: 1.4em;
-}
-
-.timeline h2,
-.timeline h3 {
-    font-weight: 600;
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-.timeline .event {
-    border-bottom: 1px dashed rgb(201, 89, 89);
-    padding-bottom: 25px;
-    margin-bottom: 25px;
-    position: relative;
-}
-
-@media (max-width: 767px) {
-    .timeline .event {
-        padding-top: 30px;
-    }
-}
-
-.timeline .event:last-of-type {
-    padding-bottom: 0;
-    margin-bottom: 0;
-    border: none;
-}
-
-.timeline .event:before,
-.timeline .event:after {
-    position: absolute;
-    display: block;
-    top: 0;
-}
-
-.timeline .event:before {
-    left: -207px;
-    content: attr(data-date);
-    text-align: right;
-    font-weight: 100;
-    font-size: 0.9em;
-    min-width: 120px;
-}
-
-@media (max-width: 767px) {
-    .timeline .event:before {
-        left: 0px;
-        text-align: left;
-    }
-}
-
-.timeline .event:after {
-    -webkit-box-shadow: 0 0 0 3px #339FFF;;
-    box-shadow: 0 0 0 3px #339FFF;;
-    left: -55.8px;
-    background: #fff;
-    border-radius: 50%;
-    height: 9px;
-    width: 9px;
+    width: 25%;
+    height: 100vh;
+    min-height: 600px;
+    color: #fff;
+    overflow: hidden;
+    transition: width 0.5s ease;
+  }
+  .tl-item:before, .tl-item:after {
+    transform: translate3d(0, 0, 0);
     content: "";
-    top: 5px;
-}
-
-@media (max-width: 767px) {
-    .timeline .event:after {
-        left: -31.8px;
-    }
-}
-
-.rtl .timeline {
-    border-left: 0;
-    text-align: right;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 4px;
-    border-top-left-radius: 4px;
-    border-right: 3px solid #339FFF;;
-}
-
-.rtl .timeline .event::before {
+    position: absolute;
     left: 0;
-    right: -170px;
-}
-
-.rtl .timeline .event::after {
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .tl-item:after {
+    background: rgba(37, 31, 3, 0.85);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+  .tl-item:before {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 75%);
+    z-index: 1;
+    opacity: 0;
+    transform: translate3d(0, 0, 0) translateY(50%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .tl-item:hover {
+    width: 30% !important;
+  }
+  .tl-item:hover:after {
+    opacity: 0;
+  }
+  .tl-item:hover:before {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) translateY(0);
+    transition: opacity 1s ease, transform 1s ease 0.25s;
+  }
+  .tl-item:hover .tl-content {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.75s ease 0.5s;
+  }
+  .tl-item:hover .tl-bg {
+    filter: grayscale(0);
+  }
+  
+  .tl-content {
+    transform: translate3d(0, 0, 0) translateY(25px);
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin: 0 1.618em;
+    top: 55%;
+    opacity: 0;
+  }
+  .tl-content h1 {
+    font-family: "Pathway Gothic One", Helvetica Neue, Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    color: #1779cf;
+    font-size: 1.44rem;
+    font-weight: normal;
+  }
+  
+  .tl-year {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }
+  .tl-year p {
+    
+    font-size: 1.728rem;
+  
+  }
+  
+  .tl-bg {
+    transform: translate3d(0, 0, 0);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
     left: 0;
-    right: -55.8px;
-}
-/*Termina línea de tiempo*/
+    background-size: cover;
+    background-position: center center;
+    transition: filter 0.5s ease;
+    filter: grayscale(100%); 
+  }
+  /*FIN LÍNEA DEL TIEMPO*/

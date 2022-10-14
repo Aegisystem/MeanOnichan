@@ -35,78 +35,96 @@
             </blockquote>
         </figure>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h2 class="card-title text-center">Historia de MongoDB</h2>
-                        <div id="content">
-                            <ul class="timeline">
-                                <li class="event" data-date="2003">
-                                    <h3>Escalabilidad</h3>
-                                    <img src="../assets/images/horizontal-scaling.png" class="img-thumbnail"
-                                        alt="escalabilidad horizontal">
-                                    <p>problemas de escalabilidad con los sistemas de bases de datos tradicionales.</p>
-                                </li>
-                                <li class="event" data-date="2007">
-                                    <h3>10gen</h3>
-                                    <img src="../assets/images/10gen.png" class="img-thumbnail" alt="logo de 10gen">
-                                    <p>
-                                        Dwight Merriman, Eliot Horowitz y Kevin Ryan fundan 10gen para construir una
-                                        PaaS.
-                                    </p>
-                                </li>
-                                <li class="event" data-date="2009">
-                                    <h3>Lanzamiento</h3>
-                                    <ul>
-                                        <li>Febrero: MongoDB 1.0 con funciones básicas.</li>
-                                        <li>Diciembre: MongoDB 1.2 con procesamiento de datos a gran escala.</li>
-                                        <li>Servicios de soporte y capacitación.</li>
-                                        <li>Reconocimiento de la marca.</li>
-                                    </ul>
-                                </li>
-                                <li class="event" data-date="2010">
-                                    <h3>Versiones 1.4 y 1.6</h3>
-                                    <ul>
-                                        <li>Marzo: MongoDB 1.4 con creación de índices en segundo plano</li>
-                                        <li>Agosto: MongoDB 1.6 con fragmentación para producción con escalabilidad
-                                            horizontal</li>
-                                    </ul>
-                                </li>
-                                <li class="event" data-date="2012">
-                                    <h3>Crecimiento</h3>
-                                    <img src="../assets/images/mongoDB2.2.webp" class="img-thumbnail"
-                                        alt="escalabilidad horizontal">
-                                    <ul>
-                                        <li>Aumento de empleados y oficinas con soporte 24/7</li>
-                                        <li>MongoDB 2.2 con ueva colección de productos de suscripción</li>
-                                    </ul>
-                                </li>
-                                <li class="event" data-date="2013">
-                                    <h3>Reforzando</h3>
-                                    <ul>
-                                        <li>La organización cambia su nombre 10gen a MongoDB Inc.</li>
-                                        <li>250 empleados y 1000 clientes</li>
-                                        <li>Marzo: MongoDB 2.4 con el motor V8 de Google.</li>
-                                        <li>Adquisición de WiredTiger</li>
-                                    </ul>
-                                </li>
-                                <li class="event" data-date="2015">
-                                    <h3>Almacenamiento</h3>
-                                    <img src="../assets/images/mongoDB30.png" class="img-thumbnail" alt="MongoDB 3.0">
-                                    <ul>
-                                        <li>Marzo: MongoDB 3.0 con nuevo motor de almacenamiento</li>
-                                        <li>MongoDB versio 3.2</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+
+    <section id="timeline">
+
+        <div class="tl-item">
+    
+            <div class="tl-bg" style="background-image: url(../assets/images/horizontal-scaling.png)"></div>
+    
+            <div class="tl-year">
+                <p>2003</p>
             </div>
+    
+            <div class="tl-content">
+                <h1>Escalabilidad</h1>
+                <p>{{ suceso2003 }}</p>
+            </div>
+    
         </div>
-    </div>
+    
+        <div class="tl-item">
+    
+            <div class="tl-bg"
+                style="background-image: url(https://dv-website.s3.amazonaws.com/uploads/2011/09/10gen-e1315821684529.jpg)">
+            </div>
+    
+            <div class="tl-year">
+                <p>2007</p>
+            </div>
+    
+            <div class="tl-content">
+                <h1>10gen</h1>
+                <p>{{ suceso2007 }}</p>
+            </div>
+    
+        </div>
+    
+        <div class="tl-item">
+    
+            <div class="tl-bg" style="background-image: url(https://javadesde0.com/wp-content/uploads/mongodb-install.jpg)">
+            </div>
+    
+            <div class="tl-year">
+                <p>2009</p>
+            </div>
+    
+            <div class="tl-content">
+                <h1>Lanzamiento</h1>
+                <ul>
+                    <li *ngFor="let suceso2009 of sucesos2009">{{ suceso2009 }}</li>
+                </ul>
+            </div>
+    
+        </div>
+
+        <div class="tl-item">
+    
+            <div class="tl-bg" style="background-image: url(https://media.glassdoor.com/l/5a/c8/03/00/celebrating-international-women-s-day.jpg)">
+            </div>
+    
+            <div class="tl-year">
+                <p>2012</p>
+            </div>
+    
+            <div class="tl-content">
+                <h1>Crecimiento</h1>
+                <ul>
+                    <li *ngFor="let suceso2012 of sucesos2012">{{ suceso2012 }}</li>
+                </ul>
+            </div>
+    
+        </div>
+
+        <div class="tl-item">
+    
+            <div class="tl-bg" style="background-image: url(https://avatars.githubusercontent.com/u/1251095?s=280&v=4)">
+            </div>
+    
+            <div class="tl-year">
+                <p>2013</p>
+            </div>
+    
+            <div class="tl-content">
+                <h1>Reforzando</h1>
+                <ul>
+                    <li *ngFor="let suceso2013 of sucesos2013">{{ suceso2013 }}</li>
+                </ul>
+            </div>
+    
+        </div>
+    </section>
+    
     <div class="container" id="ventydesv">
         <h2 class="text-center">Ventajas y desventajas</h2>
         <table class="table">
