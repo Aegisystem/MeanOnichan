@@ -1,0 +1,30 @@
+h1{
+    font-family: 'Exo 2', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 35px;
+    font-size: 75px;
+    text-align: center;
+}
+.icono{
+    margin-right: 4px;
+    float: left;
+    width: 20%;
+    height: 20%;
+}
+#concepto{
+    margin-right: 100px;
+    margin-top: 140px;
+    text-align: justify;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#content{
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font: bold;
+    font-size: larger;
+    padding-bottom: 2px;
+    background-color: burlywood;
+    margin-left: 20%;
+    margin-right: 3%;
+}
