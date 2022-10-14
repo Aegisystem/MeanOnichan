@@ -1,6 +1,29 @@
 {
   "dependencies": {
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
     "express": "^4.18.1",
     "mongoose": "^6.6.5"
-  }
+  },
+  "name": "meanonichan",
+  "description": "First project on MEAN by El Trio Onichan",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aegisystem/MeanOnichan.git"
+  },
+  "author": "CaiceGOD-Urquiza-Correa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aegisystem/MeanOnichan/issues"
+  },
+  "homepage": "https://github.com/Aegisystem/MeanOnichan#readme"
 }

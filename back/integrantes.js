@@ -1,19 +1,13 @@
 const mongoose = require('mongoose')
 
-const IntegrantesScheme = new mongoose.Schema({
+mongoose.connect(process.env.MONGO_URI,  { useNewUrlParser: true, useUnifiedTopology: true });
 
-    ID_Integrante: {
-        type: int
-    },
-    nombre: {
-        type: String,
-    },
-    edad:  {
-        type: int
-    },
-    ocupacion: {
-        type: String
-    }
-})
+const integrantesSchema = new mongoose.Schema({
 
-module.exports = mongoose.model('integrantes', IntegrantesScheme)
+    ID_Integrante: Number,
+    nombre: String,
+    edad: Number,
+    ocupacion: [String]
+});
+
+module.exports = mongoose.model('integrantes', integrantesSchema);

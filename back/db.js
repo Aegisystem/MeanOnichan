@@ -1,11 +1,10 @@
 const mongoose = require('mongoose')
-
-const URI_DB = `mongodb://localhost:27017`
+require('dotenv').config()
 
 module.exports = () =>  {
     const connect = () =>  {
         mongoose.connect(
-            URL_DB,
+            process.env.MONGO_URI,
             {
                 keepAlive: true,
                 useNewUrlParser: true,
