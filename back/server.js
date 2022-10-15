@@ -20,7 +20,7 @@ app.use(
 
 app.get('/', (req, res) => {
     res.send({
-        data: 'Hola Mundo'
+        data: 'Hola Mundasdo'
     })
 })
 
