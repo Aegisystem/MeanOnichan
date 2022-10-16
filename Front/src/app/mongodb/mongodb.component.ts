@@ -9,7 +9,7 @@ export class MongodbComponent implements OnInit {
 
   constructor() { }
 
-  titulo = '¿Qué es MongoDB?';
+  titulo = '📄¿Qué es MongoDB?📄';
   fraseInicial = 'Mongo es una palabra derivada de Humongous';
 
   suceso2003 = 'problemas de escalabilidad con los sistemas de bases de datos tradicionales.';

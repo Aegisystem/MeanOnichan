@@ -9,7 +9,7 @@ export class ExpressjsComponent implements OnInit {
 
   constructor() { }
 
-  tituloPrincipal = '¿Qué es Express.js?';
+  tituloPrincipal = '¿Qué es Express.js?🔙';
   primerParrafo = 'Es un marco de aplicación web de código abierto para Node.js. Express se encarga de la parte back-end con la conexión a MongoDB.';
   cita = 'Es una infraestructura básica mínima extensible con innumerables complementos.';
   autorCita = 'TJ Holowaychuk';
