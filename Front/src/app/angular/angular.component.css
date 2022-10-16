@@ -157,6 +157,7 @@ body {
     margin-bottom: 15px;
     padding-bottom: 10px;
     border: 1px solid rgb(99, 85, 47);
+    padding: 10px;
 }
 
 .article h2{
@@ -164,4 +165,5 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: rgb(99, 85, 47);
     font: bolder;
+    padding: 10px;
 }
