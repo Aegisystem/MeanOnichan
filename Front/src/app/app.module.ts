@@ -10,6 +10,7 @@ import { MongodbComponent } from './mongodb/mongodb.component';
 import { ExpressjsComponent } from './expressjs/expressjs.component';
 import { AngularComponent } from './angular/angular.component';
 import { NodejsComponent } from './nodejs/nodejs.component';
+import { CrudComponent } from './crud/crud.component';
 
 const routes: Route[] = [
   {
@@ -32,6 +33,11 @@ const routes: Route[] = [
     path: 'nodejs',
     component: NodejsComponent
   },
+  {
+    path: 'crud',
+    component: CrudComponent
+  },
+  
 ]
 
 @NgModule({
@@ -42,7 +48,8 @@ const routes: Route[] = [
     MongodbComponent,
     ExpressjsComponent,
     AngularComponent,
-    NodejsComponent
+    NodejsComponent,
+    CrudComponent
   ],
   imports: [
     BrowserModule,
