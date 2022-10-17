@@ -1,29 +1,23 @@
 const express = require('express')
-const initDB = require('./db')
-const bodyParser = require('body-parser')
+const initDB = require('./config/db')
 const app = express()
 
 const port = 3001
 
-app.use(
-    bodyParser.json({
-        limit: '20mb'
-    })
-)
+const integrantesRouters = require('./routes/integrantes')
 
-app.use(
-    bodyParser.urlencoded({
-        limit: '20mb',
-        extended: true
-    })
-)
+app.use(integrantesRouters)
+ 
 
-app.get('/', (req, res) => {
-    res.send({
-        data: 'Hola Mundasdo'
-    })
+app.use(express.json())
+
+app.use(express.urlencoded({
+  extended: true
 })
+)
 
 app.listen(port, () => {
     console.log('Online =D')
 })
+
+initDB()

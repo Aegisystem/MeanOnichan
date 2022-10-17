@@ -1,15 +1,21 @@
 const mongoose = require('mongoose')
 require('dotenv').config()
 
+const DB_URI = process.env.MONGO_URI
+
 module.exports = () =>  {
+
     const connect = () =>  {
-        mongoose.connect(
-            process.env.MONGO_URI,
+
+        mongoose.connect(   
+
+            DB_URI,
             {
                 keepAlive: true,
                 useNewUrlParser: true,
                 useUnifiedTopology: true
             },
+
             (error) =>  {
                 if(error)   {
                     console.log('Explotó algo al conectar la base de datos')
