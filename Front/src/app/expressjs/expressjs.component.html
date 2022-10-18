@@ -1,0 +1,121 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:wght@800&family=Gemunu+Libre:wght@800&family=Lato:ital,wght@0,300;1,400&display=swap"
+    rel="stylesheet">
+
+
+<div class="container">
+    <h1>{{ tituloPrincipal }}</h1>
+    <img src="../assets/images/logoExpress1.png" class="rounded mx-auto d-block" id="imagenPrincipal" alt="logo Express.js">
+    <p class="concepto">{{ primerParrafo }}</p>
+    <figure class="text-center">
+        <blockquote class="blockquote">
+            <p>{{ cita }}</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+            <cite title="Source Title">{{ autorCita }}</cite>
+        </figcaption>
+    </figure>
+    <p class="concepto">{{ segundoParrafo }}</p>
+</div>
+<h1 class="titulo1">{{ tituloSucesos }}</h1>
+
+<section id="timeline">
+
+    <div class="tl-item">
+
+        <div class="tl-bg" style="background-image: url(https://uploads.toptal.io/blog/image/92837/toptal-blog-image-1471270642718-64d896e7eac3cce483ac7dd8226b50da.png)"></div>
+
+        <div class="tl-year">
+            <p>2010</p>
+        </div>
+
+        <div class="tl-content">
+            <h1>VERSION 1.0.0</h1>
+            <p>{{ suceso2010 }}</p>
+        </div>
+
+    </div>
+
+    <div class="tl-item">
+
+        <div class="tl-bg"
+            style="background-image: url(https://angelduran.com/wp-content/uploads/2021/01/inconformidad_.jpg)">
+        </div>
+
+        <div class="tl-year">
+            <p>2014</p>
+        </div>
+
+        <div class="tl-content">
+            <h1>Venta e inconformidad</h1>
+            <p>{{ suceso2014 }}</p>
+        </div>
+
+    </div>
+
+    <div class="tl-item">
+
+        <div class="tl-bg" style="background-image: url(https://lh3.googleusercontent.com/csXm00pBuJvmhsXcI1XauxFGrE66sHBbWI9QyKY0lt2h55a1VaKl6F5TrlH0wBC_aijloKw9lh8a=e14-rj-sc0xffffff-w1270)">
+        </div>
+
+        <div class="tl-year">
+            <p>2015</p>
+        </div>
+
+        <div class="tl-content">
+            <h1>Aliviando tensiones</h1>
+            <p>{{ suceso2015 }}</p>
+        </div>
+
+    </div>
+
+    <div class="tl-item">
+
+        <div class="tl-bg" style="background-image: url('../assets/images/versionesExpressjs.png')">
+        </div>
+
+        <div class="tl-year">
+            <p>2018</p>
+        </div>
+
+        <div class="tl-content">
+            <h1>Version 4.16.4</h1>
+            <p>{{ suceso2018 }}</p>
+        </div>
+
+    </div>
+</section>
+
+<div class="container" id="ventydesv">
+    <h2 class="text-center">Ventajas y desventajas</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="text-center" scope="col">Ventajas</th>
+                <th class="text-center" scope="col">Desventajas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="table-success">{{ ventajaUno }}</td>
+                <td class="table-danger">{{ desventajaUno }}</td>
+            </tr>
+            <tr>
+                <td class="table-success">{{ ventajaDos }}</td>
+                <td class="table-danger">{{ desventajaDos }}</td>
+            </tr>
+            <tr>
+                <td class="table-success">{{ ventajaTres }}</td>
+                <td class="table-danger">{{ desventajaTres }}</td>
+            </tr>
+            <tr>
+                <td class="table-success">{{ ventajaCuatro }}</td>
+            </tr>
+            <tr>
+                <td class="table-success">{{ ventajaCinco }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

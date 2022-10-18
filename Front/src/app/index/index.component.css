@@ -1,0 +1,93 @@
+h1 {
+    font-family: 'Exo 2', sans-serif;
+    margin-top: 10%;
+    margin-bottom: 35px;
+    font-size: 75px;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Exo 2', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 35px;
+    font-size: 55px;
+    text-align: center;
+}
+
+.card {
+    background-color: rgb(172, 87, 87);
+}
+
+.card-body {
+    text-align: center;
+}
+
+article {
+
+    margin-top: 50px;
+    text-align: justify;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#pie {
+    font-size: larger;
+    background-color: burlywood;
+    border: 1px solid #eee;
+    margin-top: 0px;
+    animation-duration: 1s;
+    animation-name: slidein;
+}
+
+.rounded {
+    margin-top: 50px;
+    display: block;
+
+
+
+}
+
+#title {
+
+    margin-top: 50px;
+
+
+}
+
+#historia {
+    margin-top: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: larger;
+}
+
+#remarked {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: burlywood;
+    border: 1px solid rgb(0, 0, 0);
+    font-size: larger;
+    font: bolder;
+    padding: 10px;
+    text-align: center;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+#final {
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#listica {
+    background-color: burlywood;
+    border: 1px solid rgb(0, 0, 0);
+    font-size: larger;
+    font: bold;
+    padding: 10px;
+    animation-duration: 5s;
+    animation-name: slidein;
+}
+@keyframes slidein {
+    from {
+     margin-left: 100%
+       
+    }
+}

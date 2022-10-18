@@ -1,0 +1,156 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:wght@800&family=Gemunu+Libre:wght@800&family=Lato:ital,wght@0,300;1,400&display=swap"
+    rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alkalami&display=swap" rel="stylesheet">
+
+<body>
+    <div class="container">
+        <h1>{{ titulo }}</h1>
+        <figure class="text-center">
+            <blockquote class="blockquote">
+                <p>
+                    {{ fraseInicial }}
+                </p>
+            </blockquote>
+        </figure>
+            <img id="hoja" src="../assets/images/mongodb.png" alt="logo mongodb">
+        <p id="concepto">
+            Es un sistema de base de datos no relacional o NoSQL creado en C++ orientado a documentos. Es un software de
+            licencia libre y funcional en diferentes sistemas operativos.
+            <br>
+            El formato en el que almacena la información MongoDB es BSON o Binary JSON. Además, a consola de busqueda
+            (MongoDB Shell) es hecha sobre Javascript, lo que quiere decir que se hacen las consultas sobre este
+            lenguaje.
+        </p>
+        <figure class="text-center">
+            <blockquote class="blockquote">
+                <p>
+                    Una de las diferencias más importantes con respecto a las bases de datos relacionales, es que no es
+                    necesario seguir un esquema.
+                </p>
+            </blockquote>
+        </figure>
+    </div>
+
+    <section id="timeline">
+
+        <div class="tl-item">
+    
+            <div class="tl-bg" style="background-image: url(../assets/images/horizontal-scaling.png)"></div>
+    
+            <div class="tl-year">
+                <p>2003</p>
+            </div>
+    
+            <div class="tl-content">
+                <h1>Escalabilidad</h1>
+                <p>{{ suceso2003 }}</p>
+            </div>
+    
+        </div>
+    
+        <div class="tl-item">
+    
+            <div class="tl-bg"
+                style="background-image: url(https://dv-website.s3.amazonaws.com/uploads/2011/09/10gen-e1315821684529.jpg)">
+            </div>
+    
+            <div class="tl-year">
+                <p>2007</p>
+            </div>
+    
+            <div class="tl-content">
+                <h1>10gen</h1>
+                <p>{{ suceso2007 }}</p>
+            </div>
+    
+        </div>
+    
+        <div class="tl-item">
+    
+            <div class="tl-bg" style="background-image: url(https://javadesde0.com/wp-content/uploads/mongodb-install.jpg)">
+            </div>
+    
+            <div class="tl-year">
+                <p>2009</p>
+            </div>
+    
+            <div class="tl-content">
+                <h1>Lanzamiento</h1>
+                <ul>
+                    <li *ngFor="let suceso2009 of sucesos2009">{{ suceso2009 }}</li>
+                </ul>
+            </div>
+    
+        </div>
+
+        <div class="tl-item">
+    
+            <div class="tl-bg" style="background-image: url(https://media.glassdoor.com/l/5a/c8/03/00/celebrating-international-women-s-day.jpg)">
+            </div>
+    
+            <div class="tl-year">
+                <p>2012</p>
+            </div>
+    
+            <div class="tl-content">
+                <h1>Crecimiento</h1>
+                <ul>
+                    <li *ngFor="let suceso2012 of sucesos2012">{{ suceso2012 }}</li>
+                </ul>
+            </div>
+    
+        </div>
+
+        <div class="tl-item">
+    
+            <div class="tl-bg" style="background-image: url(https://avatars.githubusercontent.com/u/1251095?s=280&v=4)">
+            </div>
+    
+            <div class="tl-year">
+                <p>2013</p>
+            </div>
+    
+            <div class="tl-content">
+                <h1>Reforzando</h1>
+                <ul>
+                    <li *ngFor="let suceso2013 of sucesos2013">{{ suceso2013 }}</li>
+                </ul>
+            </div>
+    
+        </div>
+    </section>
+    
+    <div class="container" id="ventydesv">
+        <h2 class="text-center">Ventajas y desventajas</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="text-center" scope="col">Ventajas</th>
+                    <th class="text-center" scope="col">Desventajas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="table-success">Optimización en las consultas.</td>
+                    <td class="table-danger">No se permite hacer Joins.</td>
+                </tr>
+                <tr>
+                    <td class="table-success">Ideal para entornos con pocos recursos.</td>
+                    <td class="table-danger">No es recomendable para transacciones complejas.</td>
+                </tr>
+                <tr>
+                    <td class="table-success">Herramienta de código abierto.</td>
+                    <td class="table-danger">Tecnología joven.</td>
+                </tr>
+                <tr>
+                    <td class="table-success">Complemento perfecto para JavaScript.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
