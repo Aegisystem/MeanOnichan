@@ -1,14 +1,17 @@
 const express = require('express')
 
 const router = express.Router()
+
 const controller = require('../controllers/integrantes')
 
-const path = 'integrantes'
+router.get("/", controller.getIntegrantes)
 
-router.get(`/${path}`, controller.getData)
+router.post("/", controller.createIntegrante)
 
-router.post(`/${path}`, controller.insertData2)
+router.get("/:id", controller.getIntegrante)
 
-router.post(`/${path}U`, controller.updateData)
+router.put("/:id", controller.editIntegrante)
+
+router.delete("/:id", controller.deleteIntegrante)
 
 module.exports = router

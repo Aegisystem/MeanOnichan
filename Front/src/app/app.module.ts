@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Route} from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { ExpressjsComponent } from './expressjs/expressjs.component';
 import { AngularComponent } from './angular/angular.component';
 import { NodejsComponent } from './nodejs/nodejs.component';
 import { CrudComponent } from './crud/crud.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Route[] = [
   {
@@ -54,7 +56,9 @@ const routes: Route[] = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

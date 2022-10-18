@@ -1,1 +1,74 @@
-<p>crud works!</p>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <form #integranteForm="ngForm" (ngSubmit)="addIntegrante(integranteForm)">
+                    <div class="form-group">
+                        <input 
+                        type="number"
+                        name="ID_Integrante" 
+                        class="form-control" 
+                        placeholder="Ingresa tu ID_Integrante"
+                        [(ngModel)]="integranteService.selectedIntegrante.ID_Integrante">
+                    </div>
+                    <div class="form-group">
+                        <input 
+                        type="text"
+                        name="nombre"
+                        class="form-control" 
+                        placeholder="Ingresa tu nombre"
+                        [(ngModel)]="integranteService.selectedIntegrante.nombre">
+                        
+                    </div>
+                    <div class="form-group">
+                        <input 
+                        type="number" 
+                        name="edad"
+                        class="form-control" 
+                        placeholder="Ingresa tu edad"
+                        [(ngModel)]="integranteService.selectedIntegrante.edad">
+                    </div>
+                    <button class="btn btn-primary mr-2" (click)="resetForm(integranteForm)">
+                        Limpiar
+                    </button>
+                    <button class="btn btn-secondary">
+                        Guardar
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md 8">
+        <table class = "table table-stripped">
+            <thead>
+                <tr>
+                    <th>
+                        ID_Integrante
+                    </th>
+                    <th>
+                        Nombre
+                    </th>
+                    <th>
+                        Edad
+                   </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let integrante of integranteService.integrantes">
+                    <td>{{ integrante.ID_Integrante }}</td>
+                    <td>{{ integrante.nombre}}</td>
+                    <td>{{ integrante.edad}}</td>
+                    <td>
+                        <button class="btn btn-secondary btn-sm" (click)="editIntegrante(integrante)">
+                          <i class="material-icons">edit</i>
+                        </button>
+                        <button class="btn btn-danger btn-sm" (click)="deleteIntegrante(integrante._id, integrante.nombre)">
+                          <i class="material-icons">delete</i>
+                        </button>
+                    </td>
+                </tr>   
+            </tbody>
+        </table>
+    </div>
+</div>

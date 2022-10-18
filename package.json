@@ -1,9 +1,11 @@
 {
   "dependencies": {
     "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.1",
-    "mongoose": "^6.6.5"
+    "mongoose": "^6.6.5",
+    "morgan": "^1.10.0"
   },
   "name": "meanonichan",
   "description": "First project on MEAN by El Trio Onichan",
@@ -13,6 +15,7 @@
     "nodemon": "^2.0.20"
   },
   "scripts": {
+    "dev": "nodemon back/server.js",
     "start": "nodemon back/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

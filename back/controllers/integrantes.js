@@ -1,61 +1,39 @@
-const model = require('../modelos/integrantes')
+const Integrante = require("../modelos/integrantes");
 
-exports.getData = (req, res) => {
-    model.find({}, (err, data) => {
-        if(err) console.log('Fallaste cargando los integrantes')
-        res.send({
-            data
-        })
-    })
-}
+const integranteCtrl = {};
 
-exports.insertData = (req, res) => {
-    const data = req.body
-    model.create(data, (err, docs) => {
-        if (err) {
-            res.status(422.).send({ error: 'Error' })
-        } else {
-            res.send({ data: docs })
-        }
+integranteCtrl.getIntegrantes = async (req, res, next) => {
+  const integrantes = await Integrante.find();
+  res.json(integrantes);
+};
 
-    })
-}
+integranteCtrl.createIntegrante = async (req, res, next) => {
 
-exports.insertData2 = (req, res) => {
-    req.body = {ID_Integrante: 4, nombre: "PinguiGus", edad: 90, ocupacion: ["Profesor", "Ingeniero"]};
+  const integrante = new Integrante({
+    ID_Integrante: req.body.ID_Integrante,
+    nombre: req.body.nombre,
+    edad: req.body.edad,
+  });
 
-    model.create(req.body, (err, docs) => {
-        if (err) {
-            res.status(422.).send({ error: 'Error' })
-        } else {
-            res.send({ data: docs })
-        }
+  await integrante.save();
+  res.json({ status: "Integrante created" });
+};
 
-    })
-}
+integranteCtrl.getIntegrante = async (req, res, next) => {
+  const { id } = req.params;
+  const integrante = await integrante.findById(id);
+  res.json(integrante);
+};
 
-exports.updateData = (req, res) => {
-    req.body = {ID_Integrante: 4, edad: 89};
+integranteCtrl.editIntegrante = async (req, res, next) => {
+  const { id } = req.params;
+  await Integrante.findByIdAndUpdate(id, {$set: req.body}, {new: true});
+  res.json({ status: "Integrante Updated" });
+};
 
-    model.findOneAndUpdate({ID_Integrante: req.body["ID_Integrante"]}, {edad: req.body["edad"]}, {new: true}, (err, docs) => {
-        if (err) {
-            res.status(422.).send({ error: 'Error' })
-        } else {
-            res.send({ data: docs })
-        }
+integranteCtrl.deleteIntegrante = async (req, res, next) => {
+  await Integrante.findByIdAndRemove(req.params.id);
+  res.json({ status: "Integrante Deleted" });
+};
 
-    })
-}
-
-exports.updateData = (req, res) => {
-    req.body = {ID_Integrante: 4, edad: 89};
-
-    model.findOneAndDelete({ID_Integrante: req.body["ID_Integrante"]}, (err, docs) => {
-        if (err) {
-            res.status(422.).send({ error: 'Error' })
-        } else {
-            res.send({ data: docs })
-        }
-
-    })
-}
+module.exports = integranteCtrl;
