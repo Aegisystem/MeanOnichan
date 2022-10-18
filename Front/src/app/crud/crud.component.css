@@ -1,0 +1,15 @@
+button{
+    background-color: green;
+}
+.card{
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.card-body{
+    margin-bottom: 20px;
+}
+table{
+    background-color:greenyellow ;
+    margin-top: 30px;
+    
+}
